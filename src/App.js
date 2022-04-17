@@ -42,7 +42,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = () => {
-      fetch(`http://gateway.marvel.com/v1/public/characters?apikey=${process.env.REACT_APP_PUBLIC_KEY}`)
+      fetch(`https://gateway.marvel.com/v1/public/characters?apikey=${process.env.REACT_APP_PUBLIC_KEY}`)
         .then(response => response.json())
         .then(data => {
           setCharacters(data.data.results);
